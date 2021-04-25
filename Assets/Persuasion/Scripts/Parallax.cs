@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length;
-    private float startpos;
+    [SerializeField] float length;
+    [SerializeField] float startpos;
     public GameObject camera;
     public float Parallaxeffect;
+    public float second;
 
-    private void Start()
+     void Start()
     {
         startpos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
+        second = 1;
     }
 
-    private void FixedUpdate()
+     void FixedUpdate()
     {
-        float temp = (camera.transform.position.x * (1 - Parallaxeffect));
-        float dist = (camera.transform.position.x * Parallaxeffect);
+        float temp = (camera.transform.position.x  * (1 - Parallaxeffect));
+        float dist = (camera.transform.position.x  * Parallaxeffect);
 
         transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
 

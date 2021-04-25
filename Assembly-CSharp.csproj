@@ -73,6 +73,8 @@
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\DialogueHolder.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\DialogueLine.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\NPC_Controller.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\Dialogue\SceneSwitch.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\FadingOut.cs" />
     <Compile Include="Assets\Persuasion\Scripts\gravityswitch2.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Parallax.cs" />
     <None Include="Assets\Persuasion\Scripts\Backgrounds\BackGround\Readme(BackGround).txt" />

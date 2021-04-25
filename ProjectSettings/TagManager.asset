@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Next
+  - Trigger
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Ground
   - Wall
   - YourBackgroundLayer
-  - 
+  - Player
   - 
   - 
   - 
@@ -39,12 +41,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Background2
+    uniqueID: 2996543517
     locked: 0
-  - name: YourBackgroundLayer
+  - name: Fog2
+    uniqueID: 853037063
+    locked: 0
+  - name: Background
     uniqueID: 477108333
+    locked: 0
+  - name: Fog
+    uniqueID: 1313883289
     locked: 0
   - name: Ground
     uniqueID: 1830174081
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
