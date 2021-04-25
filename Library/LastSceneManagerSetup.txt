@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Script for create 2D background with parallax/Scene/test.unity
+- path: Assets/Persuasion/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
