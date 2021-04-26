@@ -33,6 +33,8 @@ public class gravityswitch2 : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
+    public FadingOut fadetrigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +82,7 @@ public class gravityswitch2 : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
-        
+
     }
 
 
@@ -108,7 +110,7 @@ public class gravityswitch2 : MonoBehaviour
 
         Controls();
 
-        
+
     }
 
     void Controls()
@@ -171,7 +173,7 @@ public class gravityswitch2 : MonoBehaviour
                 transform.localScale = new Vector3(transform.localScale.x, 2f, transform.localScale.z);
             }
 
-           
+
         }
 
     }
@@ -202,22 +204,16 @@ public class gravityswitch2 : MonoBehaviour
 
             }
         }
+
+        if (collision.gameObject.tag == "Next")
+        {
+            fadetrigger.FadeIn();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         npc = null;
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        /*
-        if (other.gameObject.CompareTag("Collect"))
-        {
-            SceneManager.LoadScene(1);
-        }
-*/
-
     }
 }
 
