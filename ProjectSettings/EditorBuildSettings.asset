@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Persuasion/Scenes/Menu.unity
     guid: 1c7012a5326c98643af0f55b2d1d2adf
   - enabled: 1
-    path: Assets/Persuasion/Scenes/SampleScene.unity
+    path: Assets/Persuasion/Scenes/Loop1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Persuasion/Scenes/Loop2.unity
+    guid: 5a2c973ff3d30fa4e882dbf39e4da9cf
+  - enabled: 1
+    path: Assets/Persuasion/Scenes/Loop3.unity
+    guid: 2a17f3b3207e73a489573b80fb8baeb7
+  - enabled: 1
+    path: Assets/Persuasion/Scenes/Fail.unity
+    guid: 54dd00c55f4467b43ad8fe04e8dd4809
   - enabled: 1
     path: Assets/Persuasion/Scenes/WIn.unity
     guid: 3f37a62445c6e5743b83f70e21799d87

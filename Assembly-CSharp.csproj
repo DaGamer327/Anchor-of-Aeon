@@ -74,10 +74,15 @@
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\DialogueHolder.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\DialogueLine.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Dialogue\NPC_Controller.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\Dialogue\SceneSwitch.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Escape.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Exit.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\FadingOut.cs" />
     <Compile Include="Assets\Persuasion\Scripts\gravityswitch2.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Health.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\Loop.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\LowerHealth.cs" />
+    <Compile Include="Assets\Persuasion\Scripts\LowerHealthTwo.cs" />
     <Compile Include="Assets\Persuasion\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Persuasion\Scripts\Parallax.cs" />
     <None Include="Assets\Persuasion\Scripts\Backgrounds\BackGround\Readme(BackGround).txt" />
