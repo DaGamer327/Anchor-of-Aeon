@@ -34,6 +34,10 @@ public class gravityswitch2 : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public FadingOut fadetrigger;
+    public AudioSource musicSource;
+    AudioSource audioSource;
+    public AudioClip jumpSound;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +46,7 @@ public class gravityswitch2 : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         direction = 1;
         canwalljump = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -82,13 +87,7 @@ public class gravityswitch2 : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
-
-    }
-
-
-    private void FixedUpdate()
-    {
-        if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
+                if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
         {
             isGrounded = true;
             doublejump = 1;
@@ -109,6 +108,7 @@ public class gravityswitch2 : MonoBehaviour
 
 
         Controls();
+
 
 
     }
@@ -139,6 +139,7 @@ public class gravityswitch2 : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpheight);
+                PlaySound(jumpSound);
 
 
             }
@@ -149,6 +150,7 @@ public class gravityswitch2 : MonoBehaviour
                 {
                     rb.velocity = new Vector2(rb.velocity.x, jumpheight);
                     doublejump--;
+                    PlaySound(jumpSound);
                 }
 
 
@@ -166,6 +168,7 @@ public class gravityswitch2 : MonoBehaviour
                 transform.localScale = new Vector3(transform.localScale.x * -1, 2f, 1f);
                 canwalljump = true;
                 Invoke("WallJumpFalse", cooldown);
+                PlaySound(jumpSound);
             }
 
             if (!isGrounded)
@@ -214,6 +217,10 @@ public class gravityswitch2 : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         npc = null;
+    }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
 
