@@ -9,6 +9,11 @@ public class Loop : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
+        /*
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        }
+        */
     }
 }

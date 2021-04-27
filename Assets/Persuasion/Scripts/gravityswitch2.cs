@@ -201,11 +201,12 @@ public class gravityswitch2 : MonoBehaviour
         {
             npc = collision.gameObject.GetComponent<NPC_Controller>();
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 collision.gameObject.GetComponent<NPC_Controller>().ActivateDialogue();
 
             }
+
         }
 
         if (collision.gameObject.tag == "Next")
