@@ -20,6 +20,11 @@ public class MainMenu : MonoBehaviour
 
     }
 
-   
 
+    public void LevelSelect()
+    {
+
+        SceneManager.LoadScene("Loop1");
+
+    }
 }
