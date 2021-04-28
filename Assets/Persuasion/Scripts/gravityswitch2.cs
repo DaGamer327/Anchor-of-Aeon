@@ -37,6 +37,8 @@ public class gravityswitch2 : MonoBehaviour
     public AudioSource musicSource;
     AudioSource audioSource;
     public AudioClip jumpSound;
+
+    public Animator animator;
     
 
     // Start is called before the first frame update
@@ -52,6 +54,7 @@ public class gravityswitch2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -89,6 +92,7 @@ public class gravityswitch2 : MonoBehaviour
         }
                 if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
         {
+            animator.SetFloat("Jump", 0);
             isGrounded = true;
             doublejump = 1;
         }
@@ -120,12 +124,14 @@ public class gravityswitch2 : MonoBehaviour
 
             if (Input.GetKey("d"))
             {
+                animator.SetFloat("Speed", 1);
                 rb.velocity = new Vector2(sidespeed, rb.velocity.y);
                 transform.localScale = new Vector3(2f, 2f, 1f);
                 direction = 1;
             }
             else if (Input.GetKey("a"))
             {
+                animator.SetFloat("Speed", 1);
                 rb.velocity = new Vector2(-sidespeed, rb.velocity.y);
                 transform.localScale = new Vector3(-2f, 2f, 1f);
                 direction = -1;
@@ -133,11 +139,13 @@ public class gravityswitch2 : MonoBehaviour
             }
             else
             {
+                animator.SetFloat("Speed", 0);
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
 
             if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
+                animator.SetFloat("Jump", 1);
                 rb.velocity = new Vector2(rb.velocity.x, jumpheight);
                 PlaySound(jumpSound);
 
